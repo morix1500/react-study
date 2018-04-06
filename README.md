@@ -1,7 +1,7 @@
 # Study React
 
 ```
-# build
+# build 
 docker-compose build
 
 # Start
