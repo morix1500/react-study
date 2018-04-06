@@ -20,7 +20,8 @@ RUN npm install --save-dev \
                 babel-preset-env@1.6.1 \
                 babel-preset-react@6.24.1 \
                 eslint@4.19.1 \
-                eslint-loader@2.0.0
+                eslint-loader@2.0.0 \
+                babel-eslint@8.2.2
 
 COPY ./.eslintrc /app/.eslintrc
 COPY ./webpack.config.js /app/webpack.config.js
