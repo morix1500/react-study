@@ -28,7 +28,9 @@ RUN npm install --save-dev \
                 redux-thunk@2.2.0 \
                 react-redux@5.0.7 \
                 react-router-redux@4.0.8 \
-                axios@0.18.0 
+                axios@0.18.0 \
+                material-ui@next \
+                material-ui-icons
 
 COPY ./.eslintrc /app/.eslintrc
 COPY ./webpack.config.js /app/webpack.config.js
