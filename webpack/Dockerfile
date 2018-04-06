@@ -21,7 +21,14 @@ RUN npm install --save-dev \
                 babel-preset-react@6.24.1 \
                 eslint@4.19.1 \
                 eslint-loader@2.0.0 \
-                babel-eslint@8.2.2
+                babel-eslint@8.2.2 \
+                babel-plugin-transform-decorators-legacy@1.3.4 \
+                redux@3.7.2 \
+                redux-devtools@3.4.1 \
+                redux-thunk@2.2.0 \
+                react-redux@5.0.7 \
+                react-router-redux@4.0.8 \
+                axios@0.18.0 
 
 COPY ./.eslintrc /app/.eslintrc
 COPY ./webpack.config.js /app/webpack.config.js

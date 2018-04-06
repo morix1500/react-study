@@ -1,13 +1,33 @@
 import React from 'react';
-import Rect from "./Rect";
+import { connect } from "react-redux";
+import { load } from "./user";
+
+@connect(
+  state => ({
+    users: state.user.users
+  }),
+  { load }
+)
 
 export default class App extends React.Component {
+  componentWillMount() {
+    this.props.load()
+  }
+
   render() {
+    const { users } = this.props
     return (
       <div>
-        <Rect num={1} bgcolor="#e02020" />
-        <Rect num={2} bgcolor="#20e020" />
-        <Rect num={3} bgcolor="#2020e0" />
+        {users && users.map((user) => {
+          return (
+            <div key={user.email}>
+              <img src={user.picture.thumbnail} />
+              <p>名前: {user.name.first + ' ' + user.name.last}</p>
+              <p>性別: {user.gender}</p>
+              <p>email: {user.email}</p>
+            </div>
+          )
+        })}
       </div>
     )
   }
